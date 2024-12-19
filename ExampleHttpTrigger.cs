@@ -15,7 +15,7 @@ namespace AzureFunctionExample
         }
 
         [Function("ExampleHttpTrigger")]
-        public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequest req)
+        public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest req)
         {
 
             var example1 = req.Query["example1"];
